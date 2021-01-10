@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B949F0C8258CCDB8009EA435 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B949F0C7258CCDB8009EA435 /* main.m */; };
 		B9919B1225ABA266007FD2AF /* XYPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = B9919B1125ABA266007FD2AF /* XYPoint.m */; };
+		B9919B1725ABAF60007FD2AF /* Square.m in Sources */ = {isa = PBXBuildFile; fileRef = B9919B1625ABAF60007FD2AF /* Square.m */; };
 		B9D401DF259E403C00BC40A1 /* Complex.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D401DE259E403C00BC40A1 /* Complex.m */; };
 		B9D401E3259E419900BC40A1 /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D401E2259E419900BC40A1 /* Rectangle.m */; };
 		B9D401E7259F713A00BC40A1 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D401E6259F713A00BC40A1 /* Test.m */; };
@@ -31,6 +32,8 @@
 		B949F0C7258CCDB8009EA435 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B9919B1025ABA266007FD2AF /* XYPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPoint.h; sourceTree = "<group>"; };
 		B9919B1125ABA266007FD2AF /* XYPoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPoint.m; sourceTree = "<group>"; };
+		B9919B1525ABAF60007FD2AF /* Square.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Square.h; sourceTree = "<group>"; };
+		B9919B1625ABAF60007FD2AF /* Square.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Square.m; sourceTree = "<group>"; };
 		B9D401DD259E403C00BC40A1 /* Complex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Complex.h; sourceTree = "<group>"; };
 		B9D401DE259E403C00BC40A1 /* Complex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Complex.m; sourceTree = "<group>"; };
 		B9D401E1259E419900BC40A1 /* Rectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 				B9D401E6259F713A00BC40A1 /* Test.m */,
 				B9919B1025ABA266007FD2AF /* XYPoint.h */,
 				B9919B1125ABA266007FD2AF /* XYPoint.m */,
+				B9919B1525ABAF60007FD2AF /* Square.h */,
+				B9919B1625ABAF60007FD2AF /* Square.m */,
 			);
 			path = ObJCTut2;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9919B1725ABAF60007FD2AF /* Square.m in Sources */,
 				B9D401DF259E403C00BC40A1 /* Complex.m in Sources */,
 				B9D401E7259F713A00BC40A1 /* Test.m in Sources */,
 				B949F0C8258CCDB8009EA435 /* main.m in Sources */,
