@@ -6,10 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GraphicObject.h"
 
 @class XYPoint;
 
-@interface Rectangle : NSObject
+@interface Rectangle : GraphicObject
 
 @property int width, height;
 
@@ -19,10 +20,17 @@
 
 - (void) setWidth:(int)width andHeight:(int) height;
 
+- (void) translate:(XYPoint *) from;
+
 - (int) area;
 
 -(int) perimeter;
 
+-(BOOL) containsPoint:(XYPoint *)point;
+
+- (Rectangle *) intersect:(Rectangle *)rect;
+
+- (NSString *) description;
 @end
 
 

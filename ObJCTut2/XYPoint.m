@@ -14,4 +14,10 @@
     self.x = x;
     self.y = y;
 }
+
++ (instancetype)initWithX:(double)x andY:(double)y{
+    XYPoint* me = [XYPoint new];
+    [me setXY:x andY:y];
+    return me;
+}
 @end

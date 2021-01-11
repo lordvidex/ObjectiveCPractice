@@ -6,23 +6,36 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Square.h"
-//#import "Rectangle.h"
+#import "Rectangle.h"
+#import "XYPoint.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        //! This implies that a child class `Square` can be stored in a variable of it's parent type
-        //! but the methods called on it must be present in the parent class as well
-        //! This also works out of the box without importing the parent class
-        Rectangle* mySquare = [[Square alloc]init];
-        NSLog(@"My square is a %@",[mySquare class]);
-        NSLog(@"My square has %i as the length of it's side", [mySquare height]);
+        // implement the Rectangle's intersect logic..
+        Rectangle* firstRect = [Rectangle new];
+        [firstRect setOrigin:[XYPoint initWithX:0 andY:0] ];
+        [firstRect setWidth:20 andHeight:20];
         
-        /* TEST 2 */
-        //! Assigning a parent instance to a child object type also works
-        //! BUT with an IDE warning only.. also I get child methods automatically out of the box
-        Square* myRectangle = [[Rectangle alloc] init];
-        printf("%i\n",[myRectangle width]);
+        //set the second rectangle
+        Rectangle* secondRect = [Rectangle new];
+        [secondRect setOrigin:[XYPoint initWithX:10 andY:10]];
+        [secondRect setWidth:5 andHeight:5];
+        Rectangle* answer = [firstRect intersect:secondRect];
+        NSLog(@"\n%@",answer);
+        
+        //Test 2
+        // implement the Rectangle's intersect logic..
+        firstRect = [Rectangle new];
+        [firstRect setOrigin:[XYPoint initWithX:0 andY:0] ];
+        [firstRect setWidth:50 andHeight:20];
+        
+        //set the second rectangle
+        secondRect = [Rectangle new];
+        [secondRect setOrigin:[XYPoint initWithX:30 andY:0]];
+        [secondRect setWidth:50 andHeight:20];
+        answer = [firstRect intersect:secondRect];
+        NSLog(@"\n%@",answer);
+        
     }
     return 0;
 }

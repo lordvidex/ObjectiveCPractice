@@ -12,5 +12,6 @@
 @property double y;
 
 - (void) setXY:(int) x andY:(int)y;
++ (instancetype) initWithX:(double) x andY:(double) y;
 @end
 
