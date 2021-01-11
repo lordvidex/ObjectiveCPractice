@@ -31,6 +31,8 @@
 - (Rectangle *) intersect:(Rectangle *)rect;
 
 - (NSString *) description;
+
+-(void) draw;
 @end
 
 

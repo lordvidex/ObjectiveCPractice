@@ -125,12 +125,33 @@
     NSArray<XYPoint *>* array = [self Rectangle_getIntersectingPoints:rect];
     if([array count]==4){
         //TODO: solve etch case for 2 rects on the same x axis level but different x origin value
-        
-        
-        
+        int w = 0,h = 0;
+        XYPoint * ref;
+        for(int i = 0;i<array.count;i++){
+            if(!ref){
+                ref = array[i];
+                continue;
+            }
+            if(array[i].x<=ref.x&&array[i].y<=ref.y){
+                ref = array[i];
+            }
+        }
+        for (XYPoint* xt in array) {
+            if(xt.x==ref.x&&xt.y!=ref.y){
+                h = fabs(xt.x-ref.x);
+            }else if(xt.y==ref.y&&xt.x!=ref.x){
+                w = fabs(xt.x-ref.x);
+            }
+        }
+        [answer setOrigin:[XYPoint initWithX:ref.x andY:ref.y]];
+        [answer setWidth:w andHeight:h];
+        return answer;
     }else if([array count]==0){
         return answer;
     }else if([array count]==2){
+        // TODO: test cases actually fall into `array.count ==2` instead of 4:
+        // **********************s***
+        
         // we have to return a Rectangle with:
         // origin: min(x0,x1), min(y0,y1)
         // width: abs(x1-x0)
@@ -144,6 +165,24 @@
 
 -(NSString *)description{
     return [NSString stringWithFormat:@"Rectangle (\nwidth: %d, height: %d, origin: (%g,%g)",self.width,self.height,self.origin.x,self.origin.y];
+}
+- (void) draw{
+    printf(" ");
+    for(int i = 0;i<width;i++){
+        printf("-");
+    }
+    for (int i = 0; i<height; i++) {
+        printf("\n|");
+        for(int i = 0;i<width;i++){
+            printf(" ");
+        }
+        printf("|");
+    }
+    printf("\n ");
+    for(int i = 0;i<width;i++){
+        printf("-");
+    }
+    printf("\n");
 }
 @end
 

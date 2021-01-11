@@ -36,6 +36,20 @@ int main(int argc, const char * argv[]) {
         answer = [firstRect intersect:secondRect];
         NSLog(@"\n%@",answer);
         
+        //Test 3 - Hammer shape
+        // implement the Rectangle's intersect logic..
+        firstRect = [Rectangle new];
+        [firstRect setOrigin:[XYPoint initWithX:0 andY:20] ];
+        [firstRect setWidth:50 andHeight:20];
+        
+        //set the second rectangle
+        secondRect = [Rectangle new];
+        [secondRect setOrigin:[XYPoint initWithX:30 andY:0]];
+        [secondRect setWidth:50 andHeight:50];
+        answer = [firstRect intersect:secondRect];
+        NSLog(@"\n%@",answer);
+        
+        [secondRect draw];
     }
     return 0;
 }
