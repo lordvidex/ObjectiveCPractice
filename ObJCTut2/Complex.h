@@ -14,12 +14,15 @@ NS_ASSUME_NONNULL_BEGIN
 //setters methods
 - (void) setReal:(double)x;
 - (void) setImaginary:(double)y;
+- (void) setReal:(double)a andImaginary:(double)b;
 
 //getter methods
 -(double) real;
 -(double) imaginary;
--(void) print;
 
+// additional methods
+- (Complex *) add:(Complex *)a;
+-(void) print;
 @end
 
 NS_ASSUME_NONNULL_END

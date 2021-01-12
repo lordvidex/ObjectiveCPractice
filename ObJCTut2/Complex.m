@@ -27,5 +27,14 @@
 -(void)setImaginary:(double)y{
     imaginary = y;
 }
+- (void)setReal:(double)a andImaginary:(double)b{
+    real = a;
+    imaginary = b;
+}
+- (Complex *) add:(Complex *)a;{
+    Complex * answer = [Complex new];
+    [answer setReal:real+[a real] andImaginary:imaginary + [a imaginary]];
+    return answer;
+}
 
 @end
